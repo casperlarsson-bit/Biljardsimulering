@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Billiard simulator</title>
+    <link rel="icon" href="textures/9ball.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+    <script src="setup.js"></script>
+    <script src="collision.js"></script>
+    <script src="euler.js"></script>
+    <script src="blenderImport.js"></script>
+    <script src="rotations.js"></script>
+    <script src="playerInputs.js"></script>
+    <script src="main.js"></script>
+
+    <!--GUI elements, instructions-->
+    <button type="button" class="ui"> Click to view/hide instructions </button>
+    <div class="content">
+        <p>Use LMB and MOUSE WHEEL to change camera view</p>
+        <p>Press SPACE to shoot </p>
+        <p>Press LEFT and RIGHT arrow keys to rotate cue</p>
+        <p>Press UP and DOWN arrow keys to change shot power</p>
+        <p>Press C to reset camera view</p>
+        <p>Press R to reset poolballs</p>
+    </div>
+
+    <div id="powerbar">
+        Shot Power
+        <div></div>
+    </div>
+
+    <script src="instructions.js"></script>
+</body>
+
+</html>
