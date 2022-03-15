@@ -6,7 +6,6 @@ An interactive simulation of a game of billiard using three.js and WebGL.
 
 #### Folder structure
 
-- /vscode: Settings for vscode liveshare
 - /src: The source code
 - /textures: Texture files as .png or .jpg
 - /assets: Blender imports as .glTF files
