@@ -1,6 +1,6 @@
 ## TNM085 - Billiard simulator
 
-Last edit 2022-03-10 17:46
+**IMPORTANT! THREE.js made some changes which made this code not to work anymore. Due to this, fixes has been made. The solution is not beautiful but works. It is found in the branch 'new-three-libraries'.**
 
 An interactive simulation of a game of billiard using three.js and WebGL.
 
