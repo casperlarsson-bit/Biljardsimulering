@@ -1,14 +1,14 @@
 # TNM085 - Billiard simulator
 
-An interactive simulation of a game of billiard using Three.js and WebGL.
+A physics simulation applied for a game of billiard using Three.js and WebGL. The balls' positions are determined using first order Euler method given their forces from friction and impact from other balls. The physics simulation also accommodate for accurate collision between spheres, and different frictions between balls and the pool table if the balls are sliding or rolling. The physics were first developed using MATLAB, code [available here](https://github.com/casperlarsson-bit/TNM085-Billiard-Simulation-MATLAB), and then visuals were added through a web application.
 
 ## Folder structure
 
 ```
 .
-├── js          # JavaScript, main files
-├── css         # Styling for UI
 ├── assets      # glTF files, blender files merged with textures
+├── css         # Styling for UI
+├── js          # JavaScript, main files
 ├── textures    # Textures for balls and posters
 └── README.md
 ```
