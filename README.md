@@ -1,17 +1,35 @@
-## TNM085 - Billiard simulator
+# TNM085 - Billiard simulator
 
-**IMPORTANT! THREE.js made some changes which made this code not to work anymore. Due to this, fixes has been made. The solution is not beautiful but works. It is found in the branch 'new-three-libraries'.**
+An interactive simulation of a game of billiard using Three.js and WebGL.
 
-An interactive simulation of a game of billiard using three.js and WebGL.
+## Folder structure
 
-#### Folder structure
+```
+.
+├── js          # JavaScript, main files
+├── css         # Styling for UI
+├── assets      # glTF files, blender files merged with textures
+├── textures    # Textures for balls and posters
+└── README.md
+```
 
-- /src: The source code
-- /textures: Texture files as .png or .jpg
-- /assets: Blender imports as .glTF files
+## Setup instructions
 
-#### Setup instructions
+The simulation is created with [Three.js](https://threejs.org/) which requires a webserver to run. Setup is for live server in VSCode. Any other server method will work. Do _not_ open the files directly in the folders, since they will not load properly then
 
-To be able to run three.js files they have to be stored on a server.
-Make sure they are on a local or other server and access the files through the server, 
-do *not* open them directly in the folders, since they will not load properly then
+- Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VSCode.
+- Open the main folder in VSCode (Ctrl+Shift+E)
+- Press the _Go Live_ text at the bottom menu bar
+- The website should open automatically, otherwise it is usually hosted at [http://127.0.0.1:5501/](http://127.0.0.1:5501/)
+
+## Known issues
+
+There are a few visual issues, and possible issues with the physics logic:
+
+- The blender imports will not recieve shadows correctly. This is currently solved by placing an invisible plane on top of the pool table, which recieves the shadows from the balls. It works but not ideal.
+- When balls recieve too high of a velocity after a collision, they sometimes stay in place, just spinning without updating its position.
+- Additionally, when the balls are traveling too fast they do not sample quickly enough to trigger collisions between two balls and might travel through it.
+
+## Further development
+
+Currently the code base is implemented using traditional data structures, such as arrays and objects. A cleaner version would convert the balls into its own class, with an array of instances instead of multiple arrays for the balls' positions, velocities, etc.
