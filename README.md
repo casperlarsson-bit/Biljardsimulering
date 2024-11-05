@@ -36,3 +36,5 @@ There are a few visual issues, and possible issues with the physics logic:
 ## Further development
 
 Currently the code base is implemented using traditional data structures, such as arrays and objects. A cleaner version would convert the balls into its own class, with an array of instances instead of multiple arrays for the balls' positions, velocities, etc.
+
+The controls could also be updated. Right now the user would use the arrow keys to rotate the billiard cue, with a fixed sample. This results in not every angle being represented. A possible solution is to just shoot in the direction the camera is angled.
